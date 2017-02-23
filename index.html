@@ -16,7 +16,7 @@
     <script src="js/main.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/carousel.js"></script>
-<!--      <script src="login.js"></script> -->
+    <!--  <script src="login.js"></script> -->
     <title>index</title>
 </head>
 
@@ -92,6 +92,16 @@
             </div>
         </div>
     </header>
+    <!--  email驗證成功，自動登入畫面 -->
+    <div class="confirm-success-container">
+        <div class="confirm-success">
+            <p class="confirm-words">
+                已成功註冊，歡迎使用Jam!
+            </p>
+            <button type="button" class="confirm-button">確認</button>
+        </div>
+    </div>
+    <!-- 登入/註冊畫面 -->
     <div class="cd-user-modal">
         <!-- this is the entire modal form, including the background -->
         <div class="cd-user-modal-container">
@@ -101,8 +111,11 @@
                 <li><a href="#0">註冊</a></li>
             </ul>
             <div id="cd-login">
-                <!-- log in form 登入區塊表格 -->
+                <!-- log in form -->
                 <form class="cd-form">
+                    <a class="btn btn-block btn-social btn-facebook">
+                        <span class="fa fa-facebook"></span> 使用Facebook登入
+                    </a>
                     <p class="fieldset">
                         <label class="image-replace cd-email" for="signin-email">E-mail</label>
                         <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
@@ -118,9 +131,6 @@
                         <input type="checkbox" id="remember-me" checked>
                         <label for="remember-me">記得我</label>
                     </p>
-                    <a class="btn btn-block btn-social btn-facebook">
-                        <span class="fa fa-facebook"></span> 使用Facebook登入
-                    </a>
                     <p class="fieldset">
                         <input class="full-width" type="submit" value="登入">
                     </p>
@@ -132,30 +142,30 @@
             <div id="cd-signup">
                 <!-- sign up form -->
                 <form class="cd-form">
+                    <a class="btn btn-block btn-social btn-facebook">
+                        <span class="fa fa-facebook"></span> 使用Facebook註冊
+                    </a>
                     <p class="fieldset">
                         <label class="image-replace cd-email" for="signup-email">E-mail</label>
                         <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
-                        <span class="cd-error-message">Error message here!</span>
+                        <span class="cd-error-message">此帳號已被註冊!</span>
                     </p>
                     <p class="fieldset">
                         <label class="image-replace cd-password" for="signup-password">Password</label>
                         <input class="full-width has-padding has-border" id="signup-password" type="text" placeholder="密碼">
                         <a href="#0" class="hide-password">隱藏密碼</a>
-                        <span class="cd-error-message">Error message here!</span>
+                        <span class="cd-error-message">請使用8位以上的英文+數字組成密碼!</span>
                     </p>
                     <p class="fieldset">
                         <label class="image-replace cd-password" for="signup-password">Password</label>
                         <input class="full-width has-padding has-border" id="signup-password" type="text" placeholder="確認密碼">
                         <a href="#0" class="hide-password">隱藏密碼</a>
-                        <span class="cd-error-message">Error message here!</span>
+                        <span class="cd-error-message">密碼不一致!</span>
                     </p>
                     <p class="fieldset">
                         <input type="checkbox" id="accept-terms">
                         <label for="accept-terms">我同意 <a href="#0" class="terms">使用條款與規範</a></label>
                     </p>
-                    <a class="btn btn-block btn-social btn-facebook">
-                        <span class="fa fa-facebook"></span> 使用Facebook註冊
-                    </a>
                     <p class="fieldset">
                         <input class="full-width has-padding" type="submit" value="註冊">
                     </p>
@@ -165,7 +175,7 @@
             <!-- cd-signup -->
             <div id="cd-reset-password">
                 <!-- reset password form -->
-                <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+                <p class="cd-form-message">忘記密碼?請填入註冊信箱，我們將會寄一組新的密碼給您</p>
                 <form class="cd-form">
                     <p class="fieldset">
                         <label class="image-replace cd-email" for="reset-email">E-mail</label>
@@ -173,10 +183,10 @@
                         <span class="cd-error-message">Error message here!</span>
                     </p>
                     <p class="fieldset">
-                        <input class="full-width has-padding" type="submit" value="Reset password">
+                        <input class="full-width has-padding" type="submit" value="重設密碼">
                     </p>
                 </form>
-                <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+                <p class="cd-form-bottom-message"><a href="#0">回到登入畫面</a></p>
             </div>
             <!-- cd-reset-password -->
             <a href="#0" class="cd-close-form">Close</a>
