@@ -3,19 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-	<!--測試一下Merge該怎麼用-->
+	<!--jQuery-->
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+	<!--
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	-->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="css/bootstrap-social.css">
     <link rel="stylesheet" href="css/custom1.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
-	<!--  ↑ jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!--
     <script src="js/main.js"></script>
+-->
+    <script src="js/actions/starter.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/carousel.js"></script>
     <!--  <script src="login.js"></script> -->
@@ -40,8 +45,8 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><i class="fa fa-envelope-o" fa-5x aria-hidden="true" ></i><span class="badge">1<span></a></li>
-                    <li><a href="#" class="login">登入</a></li>
-                    <li><a href="#" class="signup">註冊</a></li>
+                    <li><a  href="#" class="login">登入</a></li>
+                    <li><a  href="#" class="signup">註冊</a></li>
                 </ul>
             </div>
         </div>
@@ -95,46 +100,45 @@
         </div>
     </header>
     <!--  email驗證成功，自動登入畫面 -->
-    <div class="confirm-success-container">
+ <!--   <div class="confirm-success-container">
         <div class="confirm-success">
             <p class="confirm-words">
                 已成功註冊，歡迎使用Jam!
             </p>
             <button type="button" class="confirm-button">確認</button>
         </div>
-    </div>
+    </div> 
+-->
     <!-- 登入/註冊畫面 -->
     <div class="cd-user-modal">
         <!-- this is the entire modal form, including the background -->
         <div class="cd-user-modal-container">
             <!-- this is the container wrapper -->
             <ul class="cd-switcher">
-                <li><a href="#0">登入</a></li>
-                <li><a href="#0">註冊</a></li>
+            <li><a href="#0">登入</a></li>
+            <li><a href="#0">註冊</a></li>
             </ul>
             <div id="cd-login">
                 <!-- log in form -->
                 <form class="cd-form">
-                    <a class="btn btn-block btn-social btn-facebook">
-                        <span class="fa fa-facebook"></span> 使用Facebook登入
-                    </a>
+                    <a class="btn btn-block btn-social btn-facebook"><span class="fa fa-facebook"></span> 使用Facebook登入</a>
                     <p class="fieldset">
                         <label class="image-replace cd-email" for="signin-email">E-mail</label>
-                        <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+                        <input id="fi_loginACC" class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
                         <span class="cd-error-message">Error message here!</span>
                     </p>
                     <p class="fieldset">
                         <label class="image-replace cd-password" for="signin-password">Password</label>
-                        <input class="full-width has-padding has-border" id="signin-password" type="text" placeholder="密碼">
+                        <input id="fi_loginPW" class="full-width has-padding has-border" id="signin-password" type="text" placeholder="密碼">
                         <a href="#0" class="hide-password">隱藏密碼</a>
                         <span class="cd-error-message">Error message here!</span>
                     </p>
                     <p class="fieldset">
-                        <input type="checkbox" id="remember-me" checked>
+                        <input type="checkbox" id="remember-me">
                         <label for="remember-me">記得我</label>
                     </p>
                     <p class="fieldset">
-                        <input class="full-width" type="submit" value="登入">
+                        <input id="doLogin" class="full-width" type="submit" value="登入">
                     </p>
                 </form>
                 <p class="cd-form-bottom-message"><a href="#0">忘記密碼?</a></p>
@@ -144,7 +148,7 @@
             <div id="cd-signup">
                 <!-- sign up form -->
                 <form class="cd-form">
-                    <a class="btn btn-block btn-social btn-facebook">
+                    <a id="btn_doFbReg" class="btn btn-block btn-social btn-facebook">
                         <span class="fa fa-facebook"></span> 使用Facebook註冊
                     </a>
                     <p class="fieldset">
@@ -195,6 +199,10 @@
         </div>
         <!-- cd-user-modal-container -->
     </div>
+	
+<!-- ▲登入/註冊畫面▲ -->
+	
+	
     <!-- cd-user-modal -->
     <!-- 找老師預覽 thumbnails in carousel-->
     <section class="container-fluid text-center" id="teacher-profolio">

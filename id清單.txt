@@ -1,0 +1,15 @@
+網頁id 列表
+
+檔案：index.html
+ID			描述
+btn_login			開啟登入介面
+btn_register		開啟註冊介面
+btn_doLogin			登入(動作)
+btn_doRegister		註冊(動作)
+btn_doFbLogin		FB登入
+btn_doFbReg			FB註冊
+fi_loginACC			登入帳號
+fi_loginPW			登入密碼
+
+
+invaliadate above
